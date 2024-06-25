@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+
+        .formdiv{
+            background-color: rgb(73 101 43 / 56%);
+            margin: 200px;
+            height: 650px;
+            width: 800px;
+            padding: 20px;
+            border-radius:10px;
+        }
+        
+        h1{
+            margin: 30px;
+            margin-top: 0px;
+            padding:10px;
+        }
+        .innerform{
+            margin :10px;
+        }
+
+        .forminput{
+            margin:10px;
+            width: 250px;
+            height: 18px;
+            border-radius: 5px;
+        }
+        
+        .outerform{
+           margin-left: 250px;
+           font-size: large;
+        }
+
+        #gender{
+            margin-top: 30px;
+        }
+        #genderinput{
+            margin-bottom: 25px;
+        }
+        .gender{
+            margin-top: 10px;
+            margin-bottom: 15px;
+        }
+
+    </style>
+
+    <script>
+    function displayFunction(){
+        
+        let Fname=document.getElementById("Fname").value;
+        let Lname=document.getElementById("Lname").value;
+        let Mobile=document.getElementById("number").value;
+        let Gender;
+        if(document.getElementById('Gender1').checked == true) {
+             Gender="Male"
+        } 
+        else if(document.getElementById('Gender2').checked == true) {
+            Gender="Female"
+        } 
+        else {
+            document.write("Gender radio button is not selected");
+        }
+        let Address=document.getElementById("Address").value;
+        let Email=document.getElementById("Email").value;
+        let Message=document.getElementById("Message").value;
+
+        document.writeln("Name:- "+Fname+" "+Lname+"<br>")
+        document.writeln("Mobile:- "+Mobile+"<br>")
+        document.writeln("Address:- "+Address+"<br>")
+        document.writeln("Gender:- "+Gender+"<br>")
+        document.writeln("Email:- "+Email+"<br>")
+        document.writeln("Message:- "+Message)
+    }
+    </script>
+
+</head>
+<body>
+    <div class="formdiv">
+    <form>
+    
+    <h1 style="text-align:center ;">Sign-Up</h1>
+    <div class="outerform">
+
+    <label class="innerform" " for="fname">First name:</label><br>
+    <input class="forminput" type="text" required id="Fname"><br>
+
+    <label class="innerform" for="lname" >Last name:</label><br>
+    <input class="forminput" type="text" required id="Lname" ><br>
+    
+    <label class="innerform" for="Mobil">Mobile number:</label><br>
+    <input class="forminput" type="text" required id="number"><br>
+
+    <label class="innerform" for="Address">Address:</label><br>
+    <input class="forminput" type="text" required id="Address"><br>
+    
+    <div class="gender">
+    <label class="innerform"  for="Gender">Gender:</label>
+
+    <input type="radio" id="Gender1" name="gender" value="male"/>
+     <label for="Gender1">Male</label>
+
+    <input type="radio" id="Gender2" name="gender" value="female"/>
+     <label for="Gender2">Female</label><br>
+    </div>
+
+    <label class="innerform"  for="email">Email:</label><br>
+    <input class="forminput" type="email" required id="Email"><br>
+    
+    <label class="innerform" for="message">Message:</label><br>
+    <textarea class="forminput" id="Message" style="height: 50px;"></textarea><br>
+
+    <button class="forminput" style="height: 30px; padding:4px;" type="submit" onclick="displayFunction()"> Submit </button><br>
+    
+    <a style=" margin-left:100px;" href="NextPage.html">Login</a>
+    </div>
+    </form>
+    </div>
+</body>
+</html>
