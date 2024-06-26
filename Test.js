@@ -280,3 +280,17 @@
 
 // console.log(addNumber(5,2));
 
+// const addNumber = (num1,num2) => (num1+num2)
+
+// console.log(addNumber(5,2))
+
+// (function Baby (){
+//     console.log("Hello Baby");
+// })();
+
+// ((name) => {
+//     console.log(`Hello Baby 2 ${name}`);
+// })('Sahil')
+
+
+
