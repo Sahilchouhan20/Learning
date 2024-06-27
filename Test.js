@@ -292,5 +292,8 @@
 //     console.log(`Hello Baby 2 ${name}`);
 // })('Sahil')
 
+const MyNums=[1,2,3,4,5,6,7,8,9,10];
 
+const newNums= MyNums.filter((num) => num>4)
 
+console.log(newNums);
