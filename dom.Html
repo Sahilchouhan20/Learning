@@ -9,6 +9,9 @@
     <ul class="language">
         <li>JavaScript</li>
     </ul>
+    <li id="e"> <img alt="" onclick="alert('owl')"> owl</li>
+    <li id="owl"> <img alt="" onclick="alert('owl')"> owl</li>
+    <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus eum natus commodi illo hic dolorem alias, quis quibusdam! Doloremque mollitia corrupti quis vero culpa. Quibusdam facere mollitia laudantium voluptatum incidunt!</p>
 </body>
 <script>
     function addLanguage(langName){
@@ -33,5 +36,17 @@
 
     const firstLang=document.querySelector('li:first-child')
     firstLang.outerHTML='<li>Rubby</li>'
+
+    document.getElementById('owl').onclick=function(){
+        alert("owl clicked")
+    }
+
+    document.getElementById('owl').addEventListener('click',function(){
+        alert("owl clicked again")
+    })
+
+    document.getElementById("owl").addEventListener("click",function(e){
+        console.log(e)
+    },false)
 </script>
 </html>
